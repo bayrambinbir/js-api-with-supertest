@@ -23,7 +23,7 @@ describe("User Posts", () => {
     userId = await createRandomUserWithFaker();
   });
 
-  it.only("/posts", async () => {
+  it("/posts", async () => {
     const data = {
       user_id: userId,
       title: faker.lorem.sentence(),
