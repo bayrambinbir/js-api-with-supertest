@@ -15,10 +15,9 @@ describe.skip("Users", () => {
   //     done();
   //   });
   // });
-  it("GET /users", () => {
-    return request.get(`/users?access-token=${TOKEN}`).then((res) => {
-      expect(res.body.data).to.not.be.empty;
-    });
+  it("GET /users", async () => {
+    const res = await request.get(`/users?access-token=${TOKEN}`);
+    expect(res.body.data).to.not.be.empty;
   });
 
   it("GET /users/:id", () => {
